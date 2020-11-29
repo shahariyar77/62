@@ -1,0 +1,128 @@
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Montserrat,Philosopher,Roboto;
+    
+}
+.project-bg-1{
+    background-image: url(img/car1.jpg);
+}.project-bg-2{
+    background-image: url(img/img-2.jpg);
+}.project-bg-3{
+    background-image: url(img/img-3.jpg);
+}.project-bg-4{
+    background-image: url(img/img-4.jpg);
+}
+
+
+/*========================   Nav manu ==================*/
+
+.section-padding {
+  padding: 100px 0;
+}
+.filter-project {
+  margin: 0 0 50px;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.filter-project li {
+  font-weight: 700;
+  border-bottom: 2px solid #fff;
+  display: inline-block;
+  margin: 0 10px;
+    cursor: pointer;
+}
+.filter-project li.active {
+  border-bottom: 2px solid #333;
+}
+.single-projectj-item {
+  background-size: cover;
+  background-position: center;
+  background-color: #ddd;
+  height: 300px;
+  margin-bottom: 30px;
+  display: table;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.project-hover {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  transition: .3s;
+  text-transform: lowercase;
+  font-weight: 300;
+  transform: scale(.8);
+  opacity: 0;
+  visibility: hidden;
+}
+.project-hover::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  z-index: -1;
+  content: "";
+  opacity: .5;
+}
+.project-hover h2 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+    color: #fff;
+}
+.project-hover p:last-child {
+  margin: 0;
+    color: #fff;
+}
+.single-projectj-item::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 80px;
+  width: 80px;
+  content: "";
+  border-right: 1px solid #000;
+  z-index: 2;
+  border-top: 1px solid #000;
+  opacity: 0;
+  visibility: hidden;
+    transition: .3s;
+}
+.single-projectj-item::before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 80px;
+  width: 80px;
+  content: "";
+  border-left: 1px solid #000;
+  z-index: 2;
+  border-bottom: 1px solid #000;
+  opacity: 0;
+  transition: .3s;   
+}
+.single-projectj-item:hover .project-hover {
+  transform: scale(1);
+  visibility: visible;
+  opacity: 1
+}
+.single-projectj-item:hover:before{
+    visibility: visible;
+    opacity: 1;
+}
+.single-projectj-item:hover:after{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
